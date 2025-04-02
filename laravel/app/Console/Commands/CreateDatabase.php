@@ -40,10 +40,10 @@ class CreateDatabase extends Command
             return;
         }
 
-        // if(empty($password)) {
-        //     $this->error('Esse banco exige uma senha definida no .env.');
-        //     return;
-        // }
+        if(empty($password)) {
+            $this->error('Esse banco exige uma senha definida no .env.');
+            return;
+        }
 
         $query = "CREATE DATABASE IF NOT EXISTS `$database` CHARACTER SET $charset COLLATE $collate";
 
@@ -52,7 +52,7 @@ class CreateDatabase extends Command
             $this->info("Banco de dados '$database' criado.");
 
             if ($username && $password) {
-                DB::connection('mysql_root')->statement("CREATE USER IF NOT EXISTS '$username'@'$host'");//IDENTIFIED BY '$password'");
+                DB::connection('mysql_root')->statement("CREATE USER IF NOT EXISTS '$username'@'$host' IDENTIFIED BY '$password'");
                 DB::connection('mysql_root')->statement("GRANT ALL PRIVILEGES ON `$database`.* TO '$username'@'$host'");
                 $this->info("Usuário '$username' configurado com a senha informada no .env.");
             }

@@ -15,6 +15,23 @@ Route::middleware('auth')->group(function () {
 });
 
 
+//grupo de rotas da agenda
+Route::prefix('agendas')->middleware(['auth'])->group(function () {
+    //cadastro de agenda, visualizacao
+    //cadastro de tipo agenda e status
+    //   exemplo de rotas
+        // Route::get('/agendamentos', [agendaController::class, 'index'])->name('index');
+});
+
+//grupo de rotas cliente
+Route::prefix('cliente')->middleware(['auth'])->group(function () {
+    //cadastro e alteracao de cliente
+    //visualizacao filtro de pesquisa
+    //   exemplo de rotas
+        // Route::get('/agendamentos', [agendaController::class, 'index'])->name('index');
+});
+
+
 Route::get('/', function () {
     return view('home');
 })->name('home');
