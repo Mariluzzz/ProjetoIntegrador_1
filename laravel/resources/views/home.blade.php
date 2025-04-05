@@ -28,7 +28,6 @@
     @auth
         <div class="center-align">
             <p>Agora você está logado! Aproveite nossos serviços de gerenciamento :)</p>
-            <a href="{{ route('tasks.index') }}" class="waves-effect waves-light btn">Ir para Agendas</a>
         </div>
     @endauth
 </div>

@@ -17,8 +17,9 @@
                     <li><a href="{{ route('user.login') }}">Login</a></li>
                 @endguest
                 @auth
-                    <li><a href="{{ route('cliente.index') }}">Cliente</a></li>
-                    <li><a href="{{ route('agenda.index') }}">Agenda</a></li>
+                    <li><a href="{{ route('client.index') }}">Cliente</a></li>
+                    <li><a href="{{ route('home') }}">Agenda</a></li>
+                    <li><a href="{{ route('tipos.index') }}">Tipo Agenda</a></li>
                     <li>
                         <form action="{{ route('user.logout') }}" method="POST">
                             @csrf
