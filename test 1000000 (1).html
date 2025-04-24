@@ -1,318 +1,1019 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calendário Abril 2025</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <style>
-    @media (max-width: 575px) {
-      .display-4 {
-        font-size: 1.5rem;
-      }
-
-      .day h5 {
-        background-color:rgb(238, 22, 166);
-        padding: 0.1875rem 0.3125rem 0.3125rem;
-        margin: -0.5rem -0.5rem 0.5rem -0.5rem;
-      }
-
-      .date {
-        padding-left: 0.25rem;
-      }
-    }
-
-    @media (min-width: 576px) {
-      .day {
-        height: 14.2857vw;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda 2025 com Eventos</title>
+    <style>
+        body {
+            td {
+                border: 1px solid #5a5a59;
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        }
+        .mes {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #f0f0f0;
+            padding: 8px;
+            text-align: center;
+            cursor: pointer; /* Indica que a célula é clicável */
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        td:hover {
+            background-color: #e0e0e0; /* Destaque ao passar o mouse */
+        }
+    </style>
+    <script>
+        function mostrarOpcoesEvento(dia, mes) {
+            // Em uma aplicação real, aqui você abriria um modal ou mostraria opções
+            // para adicionar, visualizar ou editar eventos para o dia selecionado.
+            alert(`Você clicou no dia ${dia} de ${mes}. Aqui você poderia adicionar/ver eventos.`);
+        }
+    </script>
 </head>
 <body>
-  <div class="container-fluid">
-    <header class="mb-4 text-center">
-      <h4 class="display-23">Abril 2025</h4>
-      <div class="d-none d-sm-flex bg-dark text-white p-1">
-        <h5 class="col-sm p-1 text-center">Sunday</h5>
-        <h5 class="col-sm p-1 text-center">Monday</h5>
-        <h5 class="col-sm p-1 text-center">Tuesday</h5>
-        <h5 class="col-sm p-1 text-center">Wednesday</h5>
-        <h5 class="col-sm p-1 text-center">Thursday</h5>
-        <h5 class="col-sm p-1 text-center">Friday</h5>
-        <h5 class="col-sm p-1 text-center">Saturday</h5>
-      </div>
-    </header>
-    <div class="row border-right-0 border-bottom-0">
-            <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">30</span>
-          <small class="col d-sm-none text-center text-muted">Monday</small>
-          <span class="col-1"></span>
+
+    <div class="mes">
+        <h2>Janeiro 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="1"></td>
+                    <td onclick="mostrarOpcoesEvento(1, 'Janeiro')">1</td>
+                    <td onclick="mostrarOpcoesEvento(2, 'Janeiro')">2</td>
+                    <td onclick="mostrarOpcoesEvento(3, 'Janeiro')">3</td>
+                    <td onclick="mostrarOpcoesEvento(4, 'Janeiro')">4</td>
+                    <td onclick="mostrarOpcoesEvento(5, 'Janeiro')">5</td>
+                    <td onclick="mostrarOpcoesEvento(6, 'Janeiro')">6</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(7, 'Janeiro')">7</td>
+                    <td onclick="mostrarOpcoesEvento(8, 'Janeiro')">8</td>
+                    <td onclick="mostrarOpcoesEvento(9, 'Janeiro')">9</td>
+                    <td onclick="mostrarOpcoesEvento(10, 'Janeiro')">10</td>
+                    <td onclick="mostrarOpcoesEvento(11, 'Janeiro')">11</td>
+                    <td onclick="mostrarOpcoesEvento(12, 'Janeiro')">12</td>
+                    <td onclick="mostrarOpcoesEvento(13, 'Janeiro')">13</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(14, 'Janeiro')">14</td>
+                    <td onclick="mostrarOpcoesEvento(15, 'Janeiro')">15</td>
+                    <td onclick="mostrarOpcoesEvento(16, 'Janeiro')">16</td>
+                    <td onclick="mostrarOpcoesEvento(17, 'Janeiro')">17</td>
+                    <td onclick="mostrarOpcoesEvento(18, 'Janeiro')">18</td>
+                    <td onclick="mostrarOpcoesEvento(19, 'Janeiro')">19</td>
+                    <td onclick="mostrarOpcoesEvento(20, 'Janeiro')">20</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(21, 'Janeiro')">21</td>
+                    <td onclick="mostrarOpcoesEvento(22, 'Janeiro')">22</td>
+                    <td onclick="mostrarOpcoesEvento(23, 'Janeiro')">23</td>
+                    <td onclick="mostrarOpcoesEvento(24, 'Janeiro')">24</td>
+                    <td onclick="mostrarOpcoesEvento(25, 'Janeiro')">25</td>
+                    <td onclick="mostrarOpcoesEvento(26, 'Janeiro')">26</td>
+                    <td onclick="mostrarOpcoesEvento(27, 'Janeiro')">27</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(28, 'Janeiro')">28</td>
+                    <td onclick="mostrarOpcoesEvento(29, 'Janeiro')">29</td>
+                    <td onclick="mostrarOpcoesEvento(30, 'Janeiro')">30</td>
+                    <td onclick="mostrarOpcoesEvento(31, 'Janeiro')">31</td>
+                    <td colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mes">
+        <h2>Fevereiro 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4"></td>
+                    <td onclick="mostrarOpcoesEvento(1, 'Fevereiro')">1</td>
+                    <td onclick="mostrarOpcoesEvento(2, 'Fevereiro')">2</td>
+                    <td onclick="mostrarOpcoesEvento(3, 'Fevereiro')">3</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(4, 'Fevereiro')">4</td>
+                    <td onclick="mostrarOpcoesEvento(5, 'Fevereiro')">5</td>
+                    <td onclick="mostrarOpcoesEvento(6, 'Fevereiro')">6</td>
+                    <td onclick="mostrarOpcoesEvento(7, 'Fevereiro')">7</td>
+                    <td onclick="mostrarOpcoesEvento(8, 'Fevereiro')">8</td>
+                    <td onclick="mostrarOpcoesEvento(9, 'Fevereiro')">9</td>
+                    <td onclick="mostrarOpcoesEvento(10, 'Fevereiro')">10</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(11, 'Fevereiro')">11</td>
+                    <td onclick="mostrarOpcoesEvento(12, 'Fevereiro')">12</td>
+                    <td onclick="mostrarOpcoesEvento(13, 'Fevereiro')">13</td>
+                    <td onclick="mostrarOpcoesEvento(14, 'Fevereiro')">14</td>
+                    <td onclick="mostrarOpcoesEvento(15, 'Fevereiro')">15</td>
+                    <td onclick="mostrarOpcoesEvento(16, 'Fevereiro')">16</td>
+                    <td onclick="mostrarOpcoesEvento(17, 'Fevereiro')">17</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(18, 'Fevereiro')">18</td>
+                    <td onclick="mostrarOpcoesEvento(19, 'Fevereiro')">19</td>
+                    <td onclick="mostrarOpcoesEvento(20, 'Fevereiro')">20</td>
+                    <td onclick="mostrarOpcoesEvento(21, 'Fevereiro')">21</td>
+                    <td onclick="mostrarOpcoesEvento(22, 'Fevereiro')">22</td>
+                    <td onclick="mostrarOpcoesEvento(23, 'Fevereiro')">23</td>
+                    <td onclick="mostrarOpcoesEvento(24, 'Fevereiro')">24</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(25, 'Fevereiro')">25</td>
+                    <td onclick="mostrarOpcoesEvento(26, 'Fevereiro')">26</td>
+                    <td onclick="mostrarOpcoesEvento(27, 'Fevereiro')">27</td>
+                    <td onclick="mostrarOpcoesEvento(28, 'Fevereiro')">28</td>
+                    <td colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mes">
+        <h2>Março 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4"></td>
+                    <td></td>
+                    <td></td>
+                    <td onclick="mostrarOpcoesEvento(1, 'Março')">1</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(2, 'Março')">2</td>
+                    <td onclick="mostrarOpcoesEvento(3, 'Março')">3</td>
+                    <td onclick="mostrarOpcoesEvento(4, 'Março')">4</td>
+                    <td onclick="mostrarOpcoesEvento(5, 'Março')">5</td>
+                    <td onclick="mostrarOpcoesEvento(6, 'Março')">6</td>
+                    <td onclick="mostrarOpcoesEvento(7, 'Março')">7</td>
+                    <td onclick="mostrarOpcoesEvento(8, 'Março')">8</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(9, 'Março')">9</td>
+                    <td onclick="mostrarOpcoesEvento(10, 'Março')">10</td>
+                    <td onclick="mostrarOpcoesEvento(11, 'Março')">11</td>
+                    <td onclick="mostrarOpcoesEvento(12, 'Março')">12</td>
+                    <td onclick="mostrarOpcoesEvento(13, 'Março')">13</td>
+                    <td onclick="mostrarOpcoesEvento(14, 'Março')">14</td>
+                    <td onclick="mostrarOpcoesEvento(15, 'Março')">15</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(16, 'Março')">16</td>
+                    <td onclick="mostrarOpcoesEvento(17, 'Março')">17</td>
+                    <td onclick="mostrarOpcoesEvento(18, 'Março')">18</td>
+                    <td onclick="mostrarOpcoesEvento(19, 'Março')">19</td>
+                    <td onclick="mostrarOpcoesEvento(20, 'Março')">20</td>
+                    <td onclick="mostrarOpcoesEvento(21, 'Março')">21</td>
+                    <td onclick="mostrarOpcoesEvento(22, 'Março')">22</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(23, 'Março')">23</td>
+                    <td onclick="mostrarOpcoesEvento(24, 'Março')">24</td>
+                    <td onclick="mostrarOpcoesEvento(25, 'Março')">25</td>
+                    <td onclick="mostrarOpcoesEvento(26, 'Março')">26</td>
+                    <td onclick="mostrarOpcoesEvento(27, 'Março')">27</td>
+                    <td onclick="mostrarOpcoesEvento(28, 'Março')">28</td>
+                    <td onclick="mostrarOpcoesEvento(29, 'Março')">29</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(30, 'Março')">30</td>
+                    <td onclick="mostrarOpcoesEvento(31, 'Março')">31</td>
+                    <td colspan="5"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mes">
+        <h2>Abril 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2"></td>
+                    <td onclick="mostrarOpcoesEvento(1, 'Abril')">1</td>
+                    <td onclick="mostrarOpcoesEvento(2, 'Abril')">2</td>
+                    <td onclick="mostrarOpcoesEvento(3, 'Abril')">3</td>
+                    <td onclick="mostrarOpcoesEvento(4, 'Abril')">4</td>
+                    <td onclick="mostrarOpcoesEvento(5, 'Abril')">5</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(6, 'Abril')">6</td>
+                    <td onclick="mostrarOpcoesEvento(7, 'Abril')">7</td>
+                    <td onclick="mostrarOpcoesEvento(8, 'Abril')">8</td>
+                    <td onclick="mostrarOpcoesEvento(9, 'Abril')">9</td>
+                    <td onclick="mostrarOpcoesEvento(10, 'Abril')">10</td>
+                    <td onclick="mostrarOpcoesEvento(11, 'Abril')">11</td>
+                    <td onclick="mostrarOpcoesEvento(12, 'Abril')">12</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(13, 'Abril')">13</td>
+                    <td onclick="mostrarOpcoesEvento(14, 'Abril')">14</td>
+                    <td onclick="mostrarOpcoesEvento(15, 'Abril')">15</td>
+                    <td onclick="mostrarOpcoesEvento(16, 'Abril')">16</td>
+                    <td onclick="mostrarOpcoesEvento(17, 'Abril')">17</td>
+                    <td onclick="mostrarOpcoesEvento(18, 'Abril')">18</td>
+                    <td onclick="mostrarOpcoesEvento(19, 'Abril')">19</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(20, 'Abril')">20</td>
+                    <td onclick="mostrarOpcoesEvento(21, 'Abril')">21</td>
+                    <td onclick="mostrarOpcoesEvento(22, 'Abril')">22</td>
+                    <td onclick="mostrarOpcoesEvento(23, 'Abril')">23</td>
+                        <div class="day" style="padding-bottom: 25px;"> 23/04/2025
+                        <div class="event" title="Meu Evento">*Reunião com Orientadora Vanessa 23/04/2025 20h* </div>
+                    </div>
+                    <div id="opcoesEvento" class="opcoes-evento" style="display: none;">
+                        <h3>Opções do Evento</h3>
+                        <button onclick="adicionarEvento()">Adicionar Evento</button>
+                        <button onclick="editarEvento()">Editar Evento</button>
+                        <button onclick="removerEvento()">Remover Evento</button>
+                        <button onclick="fecharOpcoes()">Fechar</button>
+                    </div>
+                    <div id="eventoAdicionado" class="evento-adicionado" style="display: none;">
+                        <h3>Evento Adicionado</h3>
+                        <p id="eventoMensagem"></p>
+                        <button onclick="fecharEventoAdicionado()">Fechar</button>
+                    </div>
+                    <td onclick="mostrarOpcoesEvento(24, 'Abril')">24</td>
+                    <td onclick="mostrarOpcoesEvento(25, 'Abril')">25</td>
+                    <td onclick="mostrarOpcoesEvento(26, 'Abril')">26</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(27, 'Abril')">27</td>
+                    <td onclick="mostrarOpcoesEvento(28, 'Abril')">28</td>
+                    <td onclick="mostrarOpcoesEvento(29, 'Abril')">29</td>
+                    <td onclick="mostrarOpcoesEvento(30, 'Abril')">30</td>
+                    <td colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mes">
+        <h2>Maio 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4"></td>
+                    <td onclick="mostrarOpcoesEvento(1, 'Maio')">1</td>
+                    <td onclick="mostrarOpcoesEvento(2, 'Maio')">2</td>
+                    <td onclick="mostrarOpcoesEvento(3, 'Maio')">3</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(4, 'Maio')">4</td>
+                    <td onclick="mostrarOpcoesEvento(5, 'Maio')">5</td>
+                    <td onclick="mostrarOpcoesEvento(6, 'Maio')">6</td>
+                    <td onclick="mostrarOpcoesEvento(7, 'Maio')">7</td>
+                    <td onclick="mostrarOpcoesEvento(8, 'Maio')">8</td>
+                    <td onclick="mostrarOpcoesEvento(9, 'Maio')">9</td>
+                    <td onclick="mostrarOpcoesEvento(10, 'Maio')">10</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(11, 'Maio')">11</td>
+                    <td onclick="mostrarOpcoesEvento(12, 'Maio')">12</td>
+                    <td onclick="mostrarOpcoesEvento(13, 'Maio')">13</td>
+                    <td onclick="mostrarOpcoesEvento(14, 'Maio')">14</td>
+                    <td onclick="mostrarOpcoesEvento(15, 'Maio')">15</td>
+                    <td onclick="mostrarOpcoesEvento(16, 'Maio')">16</td>
+                    <td onclick="mostrarOpcoesEvento(17, 'Maio')">17</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(18, 'Maio')">18</td>
+                    <td onclick="mostrarOpcoesEvento(19, 'Maio')">19</td>
+                    <td onclick="mostrarOpcoesEvento(20, 'Maio')">20</td>
+                    <td onclick="mostrarOpcoesEvento(21, 'Maio')">21</td>
+                    <td onclick="mostrarOpcoesEvento(22, 'Maio')">22</td>
+                    <td onclick="mostrarOpcoesEvento(23, 'Maio')">23</td>
+                    <td onclick="mostrarOpcoesEvento(24, 'Maio')">24</td>
+                </tr>
+                <tr>
+                    <td onclick="mostrarOpcoesEvento(25, 'Maio')">25</td>
+                    <td onclick="mostrarOpcoesEvento(26, 'Maio')">26</td>
+                    <td onclick="mostrarOpcoesEvento(27, 'Maio')">27</td>
+                    <td onclick="mostrarOpcoesEvento(28, 'Maio')">28</td>
+                    <td onclick="mostrarOpcoesEvento(29, 'Maio')">29</td>
+                    <td onclick="mostrarOpcoesEvento(30, 'Maio')">30</td>
+                    <td onclick="mostrarOpcoesEvento(31, 'Maio')">31</td>
+                </tr>
+            </tbody> </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">31</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
+    
+        <div class="mes">
+            <h2>Junho 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(1, 'Junho')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Junho')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Junho')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Junho')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Junho')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Junho')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Junho')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Junho')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Junho')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Junho')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Junho')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Junho')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Junho')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Junho')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Junho')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Junho')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Junho')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Junho')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Junho')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Junho')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Junho')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Junho')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Junho')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Junho')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Junho')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Junho')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Junho')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Junho')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Junho')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Junho')">30</td>
+                        <td colspan="5"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">1</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Julho 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(1, 'Julho')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Julho')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Julho')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Julho')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Julho')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Julho')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Julho')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Julho')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Julho')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Julho')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Julho')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Julho')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Julho')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Julho')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Julho')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Julho')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Julho')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Julho')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Julho')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Julho')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Julho')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Julho')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Julho')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Julho')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Julho')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Julho')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Julho')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Julho')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Julho')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Julho')">30</td>
+                        <td onclick="mostrarOpcoesEvento(31, 'Julho')">31</td>
+                        <td colspan="4"></td>
+                    </tr>
+                </tbody>   
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">2</span>
-          <small class="col d-sm-none text-center text-muted">Wednesday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Agosto 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(1, 'Agosto')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Agosto')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Agosto')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Agosto')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Agosto')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Agosto')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Agosto')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Agosto')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Agosto')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Agosto')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Agosto')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Agosto')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Agosto')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Agosto')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Agosto')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Agosto')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Agosto')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Agosto')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Agosto')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Agosto')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Agosto')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Agosto')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Agosto')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Agosto')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Agosto')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Agosto')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Agosto')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Agosto')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Agosto')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Agosto')">30</td>
+                        <td onclick="mostrarOpcoesEvento(31, 'Agosto')">31</td>
+                        <td colspan="4"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">3</span>
-          <small class="col d-sm-none text-center text-muted">Thursday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Setembro 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>   
+                        <td onclick="mostrarOpcoesEvento(1, 'Setembro')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Setembro')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Setembro')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Setembro')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Setembro')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Setembro')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Setembro')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Setembro')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Setembro')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Setembro')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Setembro')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Setembro')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Setembro')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Setembro')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Setembro')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Setembro')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Setembro')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Setembro')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Setembro')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Setembro')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Setembro')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Setembro')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Setembro')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Setembro')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Setembro')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Setembro')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Setembro')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Setembro')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Setembro')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Setembro')">30</td>
+                        <td colspan="5"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <a href="#" class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">Test ProjetoIntegrador</a>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">4</span>
-          <small class="col d-sm-none text-center text-muted">Friday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Outubro 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>   
+                        <td onclick="mostrarOpcoesEvento(1, 'Outubro')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Outubro')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Outubro')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Outubro')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Outubro')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Outubro')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Outubro')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Outubro')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Outubro')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Outubro')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Outubro')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Outubro')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Outubro')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Outubro')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Outubro')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Outubro')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Outubro')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Outubro')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Outubro')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Outubro')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Outubro')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Outubro')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Outubro')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Outubro')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Outubro')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Outubro')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Outubro')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Outubro')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Outubro')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Outubro')">30</td>
+                        <td onclick="mostrarOpcoesEvento(31, 'Outubro')">31</td>
+                        <td colspan="4"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="w-100"></div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">5</span>
-          <small class="col d-sm-none text-center text-muted">Saturday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Novembro 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>   
+                        <td onclick="mostrarOpcoesEvento(1, 'Novembro')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Novembro')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Novembro')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Novembro')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Novembro')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Novembro')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Novembro')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Novembro')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Novembro')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Novembro')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Novembro')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Novembro')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Novembro')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Novembro')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Novembro')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Novembro')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Novembro')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Novembro')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Novembro')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Novembro')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Novembro')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Novembro')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Novembro')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Novembro')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Novembro')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Novembro')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Novembro')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Novembro')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Novembro')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Novembro')">30</td>
+                        <td colspan="5"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">6</span>
-          <small class="col d-sm-none text-center text-muted">Sunday</small>
-          <span class="col-1"></span>
+
+        <div class="mes">
+            <h2>Dezembro 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(1, 'Dezembro')">1</td>
+                        <td onclick="mostrarOpcoesEvento(2, 'Dezembro')">2</td>
+                        <td onclick="mostrarOpcoesEvento(3, 'Dezembro')">3</td>
+                        <td onclick="mostrarOpcoesEvento(4, 'Dezembro')">4</td>
+                        <td onclick="mostrarOpcoesEvento(5, 'Dezembro')">5</td>
+                        <td onclick="mostrarOpcoesEvento(6, 'Dezembro')">6</td>
+                        <td onclick="mostrarOpcoesEvento(7, 'Dezembro')">7</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(8, 'Dezembro')">8</td>
+                        <td onclick="mostrarOpcoesEvento(9, 'Dezembro')">9</td>
+                        <td onclick="mostrarOpcoesEvento(10, 'Dezembro')">10</td>
+                        <td onclick="mostrarOpcoesEvento(11, 'Dezembro')">11</td>
+                        <td onclick="mostrarOpcoesEvento(12, 'Dezembro')">12</td>
+                        <td onclick="mostrarOpcoesEvento(13, 'Dezembro')">13</td>
+                        <td onclick="mostrarOpcoesEvento(14, 'Dezembro')">14</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(15, 'Dezembro')">15</td>
+                        <td onclick="mostrarOpcoesEvento(16, 'Dezembro')">16</td>
+                        <td onclick="mostrarOpcoesEvento(17, 'Dezembro')">17</td>
+                        <td onclick="mostrarOpcoesEvento(18, 'Dezembro')">18</td>
+                        <td onclick="mostrarOpcoesEvento(19, 'Dezembro')">19</td>
+                        <td onclick="mostrarOpcoesEvento(20, 'Dezembro')">20</td>
+                        <td onclick="mostrarOpcoesEvento(21, 'Dezembro')">21</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(22, 'Dezembro')">22</td>
+                        <td onclick="mostrarOpcoesEvento(23, 'Dezembro')">23</td>
+                        <td onclick="mostrarOpcoesEvento(24, 'Dezembro')">24</td>
+                        <td onclick="mostrarOpcoesEvento(25, 'Dezembro')">25</td>
+                        <td onclick="mostrarOpcoesEvento(26, 'Dezembro')">26</td>
+                        <td onclick="mostrarOpcoesEvento(27, 'Dezembro')">27</td>
+                        <td onclick="mostrarOpcoesEvento(28, 'Dezembro')">28</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarOpcoesEvento(29, 'Dezembro')">29</td>
+                        <td onclick="mostrarOpcoesEvento(30, 'Dezembro')">30</td>
+                        <td onclick="mostrarOpcoesEvento(31, 'Dezembro')">31</td>
+                        <td colspan="4"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">7</span>
-          <small class="col d-sm-none text-center text-muted">Monday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">8</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
-        </div>
-        <a href="#" class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-success text-white" title="Test Event 2">Entrega do Plano de Ação 2</a>
-        <a href="#" class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-danger text-white" title="Test Event 3">Entrega do Relatório Parcial 3</a>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">9</span>
-          <small class="col d-sm-none text-center text-muted">Wednesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">10</span>
-          <small class="col d-sm-none text-center text-muted">Thursday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">11</span>
-          <small class="col d-sm-none text-center text-muted">Fryday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="w-100"></div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">12</span>
-          <small class="col d-sm-none text-center text-muted">Saturday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">13</span>
-          <small class="col d-sm-none text-center text-muted">Sunday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">14</span>
-          <small class="col d-sm-none text-center text-muted">MOnday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">15</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">16</span>
-          <small class="col d-sm-none text-center text-muted">Wednesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">17</span>
-          <small class="col d-sm-none text-center text-muted">Thursday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">18</span>
-          <small class="col d-sm-none text-center text-muted">Friday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="w-100"></div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">19</span>
-          <small class="col d-sm-none text-center text-muted">Saturday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">20</span>
-          <small class="col d-sm-none text-center text-muted">Sunday</small>
-          <span class="col-1"></span>
-        </div>
-        <a href="#" class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-primary text-white" title="Test Event with Super Duper Really Long Title">Test Event Jeffmakarrao</a>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">21</span>
-          <small class="col d-sm-none text-center text-muted">Monday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">22</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">23</span>
-          <small class="col d-sm-none text-center text-muted">Wednesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">24</span>
-          <small class="col d-sm-none text-center text-muted">Thursday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">25</span>
-          <small class="col d-sm-none text-center text-muted">Friday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="w-100"></div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">26</span>
-          <small class="col d-sm-none text-center text-muted">Saturday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">27</span>
-          <small class="col d-sm-none text-center text-muted">Sunday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">28</span>
-          <small class="col d-sm-none text-center text-muted">Monday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">29</span>
-          <small class="col d-sm-none text-center text-muted">Tuesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2 border-left-0 border-top-0 text-truncate">
-        <div class="d-flex align-items-center">
-          <span class="date col-1">30</span>
-          <small class="col d-sm-none text-center text-muted">Wednesday</small>
-          <span class="col-1"></span>
-        </div>
-        <p class="d-sm-none">No events</p>
-      </div>
-      <div class="day col-sm p-2"></div>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdXR2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu9uvS+azH7Zz8bdm1fN91SWEHLRMGQQ9vvoTxF0sI0iwWZVD"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    </div>
+    <div id="opcoesEvento" class="opcoes-evento" style="display: none;">
+        <h3>Opções do Evento</h3>
+        <button onclick="adicionarEvento()">Adicionar Evento</button>
+        <button onclick="editarEvento()">Editar Evento</button>
+        <button onclick="removerEvento()">Remover Evento</button>
+        <button onclick="fecharOpcoes()">Fechar</button>
+    </div>
+    <div id="eventoAdicionado" class="evento-adicionado" style="display: none;">
+        <h3>Evento Adicionado</h3>
+        <p id="eventoMensagem"></p>
+        <button onclick="fecharEventoAdicionado()">Fechar</button>
+    </div>
+
+    <script>
+        function mostrarOpcoesEvento(dia, mes) {
+            const opcoes = document.getElementById('opcoesEvento');
+            opcoes.style.display = 'block';
+            opcoes.dataset.dia = dia;
+            opcoes.dataset.mes = mes;
+        }
+
+        function adicionarEvento() {
+            const opcoes = document.getElementById('opcoesEvento');
+            const dia = opcoes.dataset.dia;
+            const mes = opcoes.dataset.mes;
+            const eventoMensagem = document.getElementById('eventoMensagem');
+            eventoMensagem.textContent = `Evento adicionado para ${dia} de ${mes}.`;
+            document.getElementById('eventoAdicionado').style.display = 'block';
+        }
+        function editarEvento() {
+            const opcoes = document.getElementById('opcoesEvento');
+            const dia = opcoes.dataset.dia;
+            const mes = opcoes.dataset.mes;
+            const eventoMensagem = document.getElementById('eventoMensagem');
+            eventoMensagem.textContent = `Evento editado para ${dia} de ${mes}.`;
+            document.getElementById('eventoAdicionado').style.display = 'block';
+        }
+        function removerEvento() {
+            const opcoes = document.getElementById('opcoesEvento');
+            const dia = opcoes.dataset.dia;
+            const mes = opcoes.dataset.mes;
+            const eventoMensagem = document.getElementById('eventoMensagem');
+            eventoMensagem.textContent = `Evento removido para ${dia} de ${mes}.`;
+            document.getElementById('eventoAdicionado').style.display = 'block';
+        }
+        function fecharOpcoes() {
+            const opcoes = document.getElementById('opcoesEvento');
+            opcoes.style.display = 'none';
+        }
+        function fecharEventoAdicionado() {
+            const eventoAdicionado = document.getElementById('eventoAdicionado');
+            eventoAdicionado.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .calendario {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mes {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            width: 14.28%;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        td:hover {
+            background-color: #e7f3ff;
+        }
+        .day {
+            position: relative;
+        }
+        .event {
+            background-color: #28a745;
+            color: white;
+            padding: 5px;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        .opcoes-evento {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        .opcoes-evento button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .opcoes-evento button:hover {
+            background-color: #0056b3;
+        }
+        .evento-adicionado {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        .evento-adicionado button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .evento-adicionado button:hover {
+            background-color: #0056b3;
+        }
+        .evento-adicionado p {
+            margin: 0;
+        }
+        .evento-adicionado h3 {
+            margin: 0 0 10px 0;
+        }
+        .evento-adicionado {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        .evento-adicionado button {
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .evento-adicionado button:hover {
+            background-color: #0056b3;
+        }
+        .evento-adicionado p {
+            margin: 0;
+        }
+        .evento-adicionado h3 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendário de Eventos</h1>
+    <div class="calendario">
+        <div class="mes">
+            <h2>2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Anderson<a
+                             href="file:///F:/UNIVESP%202023/2025%20-%205/PROJETO%20INTEGRADOR/AGENDA/2.png" target="_blank">visualizar</a></th>
+                        
+                        <th>Guilherme<a
+                             href="file:///F:/UNIVESP%202023/2025%20-%205/PROJETO%20INTEGRADOR/AGENDA/5.png" target="_blank">visualizar</a></th>
+                        
+                        <th>Jefferson<a
+                             href="file:///C:/Users/Jeff%C2%AE%E2%84%A2/Downloads/20220809_110906.jpg" target="_blank">visualizar</a></th>
+                        <th>Gustavo<a
+                             href="file:///F:/UNIVESP%202023/2025%20-%205/PROJETO%20INTEGRADOR/AGENDA/1.png" target="_blank">visualizar</a></th>
+                        
+                        <th>Mariana<a
+                             href="file:///F:/UNIVESP%202023/2025%20-%205/PROJETO%20INTEGRADOR/AGENDA/4.png" target="_blank">visualizar</a></th>
+                        
+                        <th>Wendel<a
+                             href="file:///F:/UNIVESP%202023/2025%20-%205/PROJETO%20INTEGRADOR/AGENDA/3.png" target="_blank">visualizarm</a></th>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html> 
     
