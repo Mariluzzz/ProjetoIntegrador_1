@@ -18,8 +18,9 @@
                 @endguest
                 @auth
                     <li><a href="{{ route('client.index') }}">Cliente</a></li>
-                    <li><a href="{{ route('home') }}">Agenda</a></li>
+                    <li><a href="{{ route('agenda.index') }}">Agenda</a></li>
                     <li><a href="{{ route('tipos.index') }}">Tipo Agenda</a></li>
+                    <li><a href="{{ route('status.index') }}">Status Agenda</a></li>
                     <li>
                         <form action="{{ route('user.logout') }}" method="POST">
                             @csrf
@@ -48,7 +49,13 @@
             M.FormSelect.init(elems);
         });
     </script>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/locales-all.global.min.js"></script>
+
 </body>
 </html>

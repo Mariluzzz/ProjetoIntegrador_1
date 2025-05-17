@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Agenda\TypesAgendaController;
+use App\Http\Controllers\Agenda\StatusAgendaController;
+use App\Http\Controllers\Agenda\AgendaController;
 
 Route::get('/usuarios', [UserController::class, 'create'])->name('user.create');
 Route::post('/usuarios', [UserController::class, 'register'])->name('user.store');
@@ -18,10 +20,10 @@ Route::middleware('auth')->group(function () {
 
 //grupo de rotas da agenda
 Route::prefix('agendas')->middleware(['auth'])->group(function () {
-    //cadastro de agenda, visualizacao
-    //cadastro de tipo agenda e status
-    //   exemplo de rotas
-        // Route::get('/agendamentos', [agendaController::class, 'index'])->name('index');
+    Route::get('/', [AgendaController::class, 'index'])->name('agenda.index');
+    Route::post('/eventos', [AgendaController::class, 'eventos'])->name('agenda.event');
+    Route::post('/eventos/criar', [AgendaController::class, 'store'])->name('agenda.event.store');
+    Route::post('/eventos/{id}', [AgendaController::class, 'update'])->name('agenda.event.update');
 });
 
 //grupo de rotas cliente
@@ -43,6 +45,14 @@ Route::prefix('agenda')->middleware(['auth'])->group(function () {
     Route::put('tipos/{tipo}', [TypesAgendaController::class, 'update'])->name('tipos.update');
     Route::get('tipos/{tipo}', [TypesAgendaController::class, 'show'])->name('tipos.show');
     Route::delete('tipos/{tipo}', [TypesAgendaController::class, 'destroy'])->name('tipos.destroy');
+
+    Route::get('status', [StatusAgendaController::class, 'index'])->name('status.index');
+    Route::get('status/create', [StatusAgendaController::class, 'create'])->name('status.create');
+    Route::post('status', [StatusAgendaController::class, 'store'])->name('status.store');
+    Route::get('status/{status}/edit', [StatusAgendaController::class, 'edit'])->name('status.edit');
+    Route::put('status/{status}', [StatusAgendaController::class, 'update'])->name('status.update');
+    Route::get('status/{status}', [StatusAgendaController::class, 'show'])->name('status.show');
+    Route::delete('status/{status}', [StatusAgendaController::class, 'destroy'])->name('status.destroy');
 });
 
 Route::get('/', function () {
